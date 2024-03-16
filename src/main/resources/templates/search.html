@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Todo List</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-center">Search Todo List</h2>
+    <form th:action="@{/todo/search}" method="post">
+        <div class="form-row">
+            <div class="col">
+                <label for="task">Task:</label>
+                <input type="text" class="form-control" id="task" name="task">
+            </div>
+            <div class="col">
+                <label for="isDone">Is Done:</label>
+                <select class="form-control" id="isDone" name="isDone">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Search</button>
+    </form>
+</div>
+</body>
+</html>
